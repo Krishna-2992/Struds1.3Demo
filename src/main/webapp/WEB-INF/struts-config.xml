@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+ <!DOCTYPE struts-config PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+   "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config
+	xmlns="http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+	<form-beans>
+		<form-bean name="helloForm"
+			type="info.java.tips.form.HelloForm" />
+	</form-beans>
+
+	<action-mappings>
+	
+		<action path="/hello" name="helloForm"
+		
+			type="info.java.tips.action.HelloAction">
+			 <forward name="succsess" path="/welcome.jsp" />
+			<input path="/hello.jsp" />
+			
+		</action>
+		
+	</action-mappings>
+
+	<message-resources parameter="info.java.tips.i18n.MessageBundle" />
+
+</struts-config>
